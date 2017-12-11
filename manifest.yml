@@ -4,5 +4,5 @@ applications:
   host: student-experience
   memory: 64M
   services:
-  - student-experience-bot-conversation
+  - student-experience-conversation
   - student-experience-db
