@@ -3,6 +3,7 @@
 # The branch may use a custom manifest
 MANIFEST=manifest.yml
 PREFIX=""
+CF_APP=student-experience
 if [ -f ${REPO_BRANCH}-manifest.yml ]; then
   MANIFEST=${REPO_BRANCH}-manifest.yml
   PREFIX=$REPO_BRANCH"-"
@@ -11,7 +12,7 @@ echo "Using manifest file: $MANIFEST"
 echo "Using prefix: $PREFIX"
 
 # Create CF services
-cf create-service conversation Lite student-experience-bot-conversation
+cf create-service conversation Lite student-experience-conversation
 cf create-service cloudantNoSQLDB Lite ${PREFIX}student-experience-db
 # Set app's env vars
 domain=".mybluemix.net"
