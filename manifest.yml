@@ -2,7 +2,7 @@
 applications:
 - name: student-experience
   host: student-experience
-  memory: 128M
+  memory: 256M
   services:
   - student-experience-conversation
   - student-experience-db
